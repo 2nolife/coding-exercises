@@ -28,6 +28,10 @@ Start the backend from the project's root directory:
 
 ```sbt run```
 
+Install "express" and "request" modules, from the project's "weblet" directory: 
+
+```npm install express request```
+
 Start the frontend from the project's "weblet" directory:
 
 ```node weblet.js```
