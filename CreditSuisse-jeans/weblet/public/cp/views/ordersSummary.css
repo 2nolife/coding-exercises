@@ -1,0 +1,11 @@
+.top-orders-wrapper .panel-title {
+	cursor: pointer;
+}
+
+.top-orders-wrapper .panel-collapse {
+	padding: 10px 0 10px 0;
+}
+
+#orders-summary h1 {
+  padding-bottom: 10px;
+}
