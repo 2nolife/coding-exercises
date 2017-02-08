@@ -20,15 +20,15 @@ The UI talks to the microservice by using REST HTTP with JSON format.
 
 ### Run ###
 To run the integration tests and populate the database with test data, approx 2.5k orders.
-From the root project directory:
+From the project's root directory:
 
 ```sbt it:test```
 
-Start the backend from the root project directory:
+Start the backend from the project's root directory:
 
 ```sbt run```
 
-Start the frontend from the project "weblet" directory:
+Start the frontend from the project's "weblet" directory:
 
 ```node weblet.js```
 
