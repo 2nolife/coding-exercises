@@ -1,0 +1,26 @@
+@import helper._
+@import models.MessageInput
+
+@(messageInputForm: Form[MessageInput], message: String)(implicit request: Request[_], messages: Messages)
+
+    @main("Home") {
+        <h1>Welcome to the Frontend!</h1>
+
+        @if(message.nonEmpty) {
+            <p>Response: @message</p>
+        }
+
+        @if(messageInputForm.hasErrors) {
+            <ul>
+                @messageInputForm.errors.map { error =>
+                  <li>@Messages(error.message)</li>
+                }
+            </ul>
+        }
+
+        @form(action = routes.MessageController.submitMessage) {
+            <p>Enter your text: </p>
+            <input type="text" id='@{messageInputForm("message").id}' name='@{messageInputForm("message").label}'>
+            <button type="submit">Test</button>
+        }
+    }

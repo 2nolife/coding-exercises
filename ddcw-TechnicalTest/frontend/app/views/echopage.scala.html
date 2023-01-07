@@ -1,0 +1,10 @@
+@import helper._
+@import models.MessageInput
+
+@(message: String)
+
+@main("Echo") {
+    @if(message.nonEmpty) {
+        <p>Echoed: @message</p>
+    }
+}
