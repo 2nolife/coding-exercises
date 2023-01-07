@@ -1,0 +1,950 @@
+@import forms.VehicleData
+@(title: String, form: Form[VehicleData])
+
+<!DOCTYPE html>
+
+<!--[if lt IE 9]><html class="lte-ie8" lang="en"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+        <!--<![endif]-->
+
+    <head><script id="f5_cspm">(function(){var f5_cspm={f5_p:'KNPHONAMLIDDMPLIDNEMHCKOBNDPJIHMMGAOMGAEMLNBDPOFMHMAOGKNICGAAJNKBFDENKIBCJOJCNLEAOMGJNBKNFOFPPLMBGEKGDMCOEBDJMFEIDHLIJNNFKGEFGGN',setCharAt:function(str,index,chr){if(index>str.length-1)return str;return str.substr(0,index)+chr+str.substr(index+1);},get_byte:function(str,i){var s=(i/16)|0;i=(i&15);s=s*32;return((str.charCodeAt(i+16+s)-65)<<4)|(str.charCodeAt(i+s)-65);},set_byte:function(str,i,b){var s=(i/16)|0;i=(i&15);s=s*32;str=f5_cspm.setCharAt(str,(i+16+s),String.fromCharCode((b>>4)+65));str=f5_cspm.setCharAt(str,(i+s),String.fromCharCode((b&15)+65));return str;},set_latency:function(str,latency){latency=latency&0xffff;str=f5_cspm.set_byte(str,32,(latency>>8));str=f5_cspm.set_byte(str,33,(latency&0xff));str=f5_cspm.set_byte(str,27,2);return str;},wait_perf_data:function(){try{var wp=window.performance.timing;if(wp.loadEventEnd>0){var res=wp.loadEventEnd-wp.navigationStart;if(res<60001){var cookie_val=f5_cspm.set_latency(f5_cspm.f5_p,res);window.document.cookie='aaaaaaaaaaaaaaa='+encodeURIComponent(cookie_val)+';path=/';}
+        return;}}
+    catch(err){return;}
+        setTimeout(f5_cspm.wait_perf_data,100);return;},go:function(){var chunk=window.document.cookie.split(/\s*;\s*/);for(var i=0;i<chunk.length;++i){var pair=chunk[i].split(/\s*=\s*/);if(pair[0]=='f5_cspm'){if(pair[1]=='1234'){var d=new Date();d.setTime(d.getTime()-1);window.document.cookie='f5_cspm=;expires='+d.toUTCString()+';path=/;';setTimeout(f5_cspm.wait_perf_data,100);}}}}}
+        f5_cspm.go();}());</script>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:image" content="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/Images/opengraph-image-4e469785ca4cc8f8dd18d0627bc43d19.png" />
+
+        <script type="text/javascript">
+            (function () { if (navigator.userAgent.match(/IEMobile\/10\.0/)) { var d = document, c = "appendChild", a = d.createElement("style"); a[c](d.createTextNode("@@-ms-viewport{width:auto!important}")); d.getElementsByTagName("head")[0][c](a); } })();
+        </script>
+            <!--[if gt IE 8]><!-->
+        <link href="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/Styles/govuk-template.css?30" media="screen"
+        rel="stylesheet" type="text/css" />
+            <!--<![endif]-->
+            <!--[if IE 6]><link href="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/Styles/govuk-template-ie6.css?30" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+            <!--[if IE 7]><link href="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/Styles/govuk-template-ie7.css?30" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+            <!--[if IE 8]><link href="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/Styles/govuk-template-ie8.css?30" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+        <link href="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/Styles/govuk-template-print.css?30" media="print" rel="stylesheet" type="text/css" />
+
+            <!--[if IE 8]>
+        <script type="text/javascript">
+          (function(){if(window.opera){return;}
+           setTimeout(function(){var a=document,g,b={families:(g=
+           ["nta"]),urls:["https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/gds/fonts-ie8-ec274e547d95d22db00164cc291c8611.css"]},
+           c="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/gds/webfont-debug-96870cf9f159ed811fd43c39bdf4656b.js",d="script",
+           e=a.createElement(d),f=a.getElementsByTagName(d)[0],h=g.length;WebFontConfig
+           ={custom:b},e.src=c,f.parentNode.insertBefore(e,f);for(;h=h-1;a.documentElement
+           .className+=' wf-'+g[h].replace(/\s/g,'').toLowerCase()+'-n4-loading');},0)
+          })()
+        </script>
+        <![endif]-->
+
+            <!--[if gte IE 9]><!-->
+        <link href="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/gds/fonts-607c54f71c7c1f98257595cedaa13a34.css" media="screen" rel="stylesheet" type="text/css" />
+            <!--<![endif]-->
+
+            <!--[if lt IE 9]>
+          <script src="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/Scripts/ie-fc5bd25c5f46587b9bff917417ab2b7f.js" type="text/javascript"></script>
+        <![endif]-->
+        <link rel="shortcut icon" href="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/Images/favicon-447e4ac1ab790342660eacfe3dcce264.ico"
+        type="image/x-icon" />
+
+            <!-- For third-generation iPad with high-resolution Retina display: -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/Images/apple-touch-icon-114x114-f1d7ccdc7b86d923386b373a9ba5e3db.png" />
+            <!-- For iPhone with high-resolution Retina display: -->
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/Images/apple-touch-icon-144x144-4e306e01c31e237722b82b7aa7130082.png" />
+            <!-- For first- and second-generation iPad: -->
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/Images/apple-touch-icon-72x72-2ddbe540853e3ba0d30fbad2a95eab3c.png" />
+            <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+        <link rel="apple-touch-icon-precomposed" href="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/Images/apple-touch-icon-57x57-37527434942ed8407b091aae5feff3f3.png" />
+
+        <title>@title</title>
+
+
+
+        <script src="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/gds/jquery-1.7.2-2ce4706f8f7193defaa9e7df2b641e9a.js" type="text/javascript"></script>
+    </head>
+
+
+
+    <body ontouchstart="">
+        @*<form method="post" action="./" onsubmit="javascript:return WebForm_OnSubmit();" id="EVL" autocomplete="off">*@
+            <div class="aspNetHidden">
+                <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+                <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+                <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTQ2ODczMjQwMA8WAh4NU2VydmljZUhlYWRlcjL8BAABAAAA/////wEAAAAAAAAADAIAAABBRG1zIFNoYXJlZCwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAACVEbXNTaGFyZWQuRGF0YUNvbnRyYWN0cy5Db21tb24uSGVhZGVyCQAAABNjb252ZXJzYXRpb25JZEZpZWxkD29yaWdpbkRhdGVGaWVsZBJhcHBsaWNhdGlvbkNERmllbGQOY2hhbm5lbENERmllbGQOY29udGFjdElkRmllbGQNZXZlbnRGbGdGaWVsZBJzZXJ2aWNlVHlwZUNERmllbGQPbGFuZ3VhZ2VDREZpZWxkDGVuZFVzZXJGaWVsZAEAAQEAAAQEBA0JAS5EbXNTaGFyZWQuRGF0YUNvbnRyYWN0cy5Db21tb24uU2VydmljZVR5cGVDb2RlAgAAACtEbXNTaGFyZWQuRGF0YUNvbnRyYWN0cy5Db21tb24uTGFuZ3VhZ2VDb2RlAgAAACZEbXNTaGFyZWQuRGF0YUNvbnRyYWN0cy5Db21tb24uRW5kVXNlcgIAAAACAAAACmEsqdYlJNNIBgMAAAALRVZMX1NjcmVlbnMGBAAAAAhEVkxBX1dFQnyDHEkAAAAAAQX7////LkRtc1NoYXJlZC5EYXRhQ29udHJhY3RzLkNvbW1vbi5TZXJ2aWNlVHlwZUNvZGUBAAAAB3ZhbHVlX18ACAIAAAACAAAABfr///8rRG1zU2hhcmVkLkRhdGFDb250cmFjdHMuQ29tbW9uLkxhbmd1YWdlQ29kZQEAAAAHdmFsdWVfXwAIAgAAAAAAAAAKCxYCZg9kFgICAQ9kFgJmDxYCHgRUZXh0BQ9WZWhpY2xlIGVucXVpcnlkGAEFIWN0bDAwJE1haW5Db250ZW50JG12VmVoaWNsZVNlYXJjaA8PZGZkmnS2dfe0MwMjutCZOpYAFo/7Oaw=" />
+            </div>
+
+            <script src="/WebResource.axd?d=ylA2f5AA0dz2rQVrlt13hyBpDm2xJY5ReSD-TJwYFi5rer4ad16MhMyvz4ffclX2xEY4Io2qhpunSIcBYl0oZqI4yHs1&amp;t=635802997220000000" type="text/javascript"></script>
+
+
+            <script src="/WebResource.axd?d=w2jUpfzaHK1ODgJtWbA5kX4ARUytzzOuRTdP2laUFbV7Mc-FVm7IU1rjhQnIqdX0EJ6P_ZPIHQkCDlIf1CbuowrZnaHEJ9B8NlOFyR7uJmiP4bLa0&amp;t=635802997220000000" type="text/javascript"></script>
+
+            <script type="text/javascript">                document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+            <div id="skiplink-container"><div><a href="#wrapper" class="skiplink">Skip to main content</a></div></div>
+
+            <div id="global-cookie-message">
+                <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies"> Find out more about cookies</a></p>
+            </div>
+                <!--end global-cookie-message-->
+
+            <header role="banner" class="with-proposition" id="global-header">
+                <div class="header-wrapper">
+                    <div class="header-global">
+                        <div class="header-logo">
+                            <a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" id="logo" class="content">
+                                <img src="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/Images/gov.uk_logotype_crown.png" width="35" height="31" alt=""> GOV.UK
+                            </a>
+                        </div>
+                            <!-- inside_header -->
+                    </div>
+                    <div class='header-proposition'>
+                        <div class='content'>
+                            <nav id='proposition-menu'>
+                                <a href='/' id='proposition-name'>Vehicle enquiry</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+                <!--end header-->
+
+
+
+            <div id="global-header-bar"></div>
+
+                <!--end global-header-bar-->
+            <div class="maincontent">
+                <div class="phase-banner">
+                    <p>
+                        <strong class="phase-tag">BETA</strong>
+                        <span>This is a new service – your <a href="mailto:evl.feedback@@dvla.gsi.gov.uk?subject=EVL%20BETA%20Service">
+                            feedback</a> will help us to improve it.</span>
+                    </p>
+                </div>
+            </div>
+                <!--end of beta banner-->
+
+            <div id="wrapper">
+                <div class="maincontent">
+                    <script src="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/Scripts/typeahead.min.js" type="text/javascript"></script>
+
+                    <div id="HeaderCont" class="start-header group">
+                        <h2>Details of the vehicle being checked</h2>
+                    </div>
+
+                    <div class="body-container group">
+                    @helper.form(action = routes.Application.search(), 'autocomplete -> "off") {
+
+                    To make an enquiry enter the vehicle registration number (number plate) and the vehicle make.
+
+                        <div class="input-block @if(form.error("registration").isDefined) { validationReq }">
+                            <div class="input-block-label strong">
+                                <label for="MainContent_txtSearchVrm" id="MainContent_lblVehicleVRN">Registration number</label>
+                            </div>
+                            @form.error("registration").map { x => <span class="Validator">@x.message</span> }
+                            @*<span id="MainContent_rfvTxtSearchVRM" class="Validator" style="display:none;">Please enter your registration number</span>*@
+                            @*<span id="MainContent_revtxtSearchVrm1" class="Validator" style="display:none;">You must enter your registration number in a valid format</span>*@
+                            <div class="input-block-textbox">
+                                <input name="registration" type="text" maxlength="8" id="registration" class="input-large input-upper" value='@form("registration").value'/>
+                            </div>
+                        </div>
+
+                        <div class="input-block @if(form.error("make").isDefined) { validationReq }">
+                            <div class="input-block-label strong">
+                                <label for="MainContent_MakeTextBox" id="MainContent_lblVehicleMake">Vehicle make</label>
+                            </div>
+                            @form.error("make").map { x => <span class="Validator">@x.message</span> }
+                            @*<span id="MainContent_reqMakeTextBox" class="Validator" style="display:none;">You must select your vehicle make from the list</span>*@
+                            <div class="input-block-textbox"><input name="make" type="text" maxlength="100" id="make" class="input-large input-upper" value='@form("make").value'/></div>
+                        </div>
+
+                        <p xmlns:utils="urn:utils" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      To check the vehicle tax rates and date of the latest V5C, please enter the V5C reference number.
+                        </p><input type="Hidden" value="CheckLastV5CDT" xmlns:utils="urn:utils" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <div class="input-block @if(form.error("reference").isDefined) { validationReq }">
+                            <div class="input-block-label strong">
+                                <label for="MainContent_txtV5CDocumentReferenceNumber" id="MainContent_lblV5CDocumentReferenceNumber">V5C document reference number (optional)</label>
+                            </div>
+
+                            @form.error("reference").map { x => <span class="Validator">@x.message</span> }
+                            @*<span id="MainContent_RegularExpressionValidator1" class="Validator" style="display:none;">Your reference number should contain 11 digits only</span>*@
+                            <div class="more-info-block">
+                                <input name="reference" maxlength="11" id="reference" class="input-large" type="tel" pattern="[0-9]*" value='@form("reference").value'/>
+                                <div class="more-info" tabindex="0">
+                                    <span onclick="" class="more-info-link default-font-size">
+                                    Where to find this
+                                    </span>
+                                    <ul>
+                                        <li>
+                                        Your V5C document reference number can be found on the front of your V5C :</li>
+                                        <li>
+                                            <img alt="v5c" src="https://www.assets.vehicleenquiry.service.gov.uk/vehicleenquiry/Assets/Images/V5C_122x145.png" /></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="action">
+                            <input type="submit" name="submit" value="Search" id="MainContent_butSearch" class="button" />
+                        </div>
+
+                    }
+                    </div>
+                    <script type='text/javascript'>
+
+        // single dataset
+        $('#make').typeahead({
+            name: 'VehicleMakes',
+            limit: '10',
+            local: ['ABARTH'
+                , 'AC'
+                , 'AC (ELECTRIC)'
+                , 'ACCESS'
+                , 'ACURA'
+                , 'ADLY'
+                , 'AEBI'
+                , 'AEON'
+                , 'AGCO ALLIS'
+                , 'AGRIFAC'
+                , 'AIE'
+                , 'AIXAM'
+                , 'AJP'
+                , 'AJS'
+                , 'ALBION'
+                , 'ALEXANDER DENNIS'
+                , 'ALFA ROMEO'
+                , 'ALFER'
+                , 'ALL WHEEL DRIVE'
+                , 'APEX'
+                , 'APPLIED SWEEPER'
+                , 'APRILIA'
+                , 'ARIX ROTARY'
+                , 'ARO'
+                , 'ASIA'
+                , 'ASQUITH'
+                , 'ASTON MARTIN'
+                , 'ATALA'
+                , 'ATLAS'
+                , 'AUDI'
+                , 'AUSTIN'
+                , 'AUSTIN HEALEY'
+                , 'AUSTIN MORRIS'
+                , 'AUSTIN-MORRIS'
+                , 'AUTOSAN'
+                , 'AUTO-TRAIL'
+                , 'AVANTI'
+                , 'AVELING BARFORD'
+                , 'AVIA'
+                , 'AXR'
+                , 'BABETTA'
+                , 'BAIMO'
+                , 'BAJAJ'
+                , 'BAOTIAN'
+                , 'BARON'
+                , 'BARONI'
+                , 'BAROSSA'
+                , 'BASHAN'
+                , 'BATAVUS'
+                , 'BATISTINIS'
+                , 'BCS'
+                , 'BEDFORD'
+                , 'BEELINE'
+                , 'BELARUS'
+                , 'BENELLI'
+                , 'BENFORD'
+                , 'BENTLEY'
+                , 'BENYE'
+                , 'BETA'
+                , 'BETTER'
+                , 'BIMOTA'
+                , 'BITELLI'
+                , 'BLATA'
+                , 'BLAW KNOX'
+                , 'BMC'
+                , 'BMW'
+                , 'BOB CAT'
+                , 'BOMAG'
+                , 'BOMBARDIER'
+                , 'BOND'
+                , 'BONSER'
+                , 'BOOM'
+                , 'BOVA'
+                , 'BRA'
+                , 'BRANSON'
+                , 'BREMACH'
+                , 'BRISTOL'
+                , 'BRISTOL (BLMC)'
+                , 'BRIT JEFFREY DIAMOND'
+                , 'BRITISH TRACKSTAR'
+                , 'BRP'
+                , 'BSA'
+                , 'BTM'
+                , 'BUELL'
+                , 'BUGATTI'
+                , 'BUICK'
+                , 'BULTACO'
+                , 'BZR'
+                , 'CADILLAC'
+                , 'CAETANO'
+                , 'CAGIVA'
+                , 'CAN-AM'
+                , 'CAPRI'
+                , 'CARBODIES'
+                , 'CASAL'
+                , 'CASE'
+                , 'CASE IH'
+                , 'CATERHAM'
+                , 'CATERPILLAR'
+                , 'CCM'
+                , 'CCS'
+                , 'CECTEK'
+                , 'CELCO PROFIL'
+                , 'CF MOTO'
+                , 'CH RACING'
+                , 'CHAMP'
+                , 'CHANG MING'
+                , 'CHAUSSON'
+                , 'CHEVROLET'
+                , 'CHEVROLET GMC'
+                , 'CHITUMA'
+                , 'CHONGQING'
+                , 'CHRYSLER'
+                , 'CHUNLAN'
+                , 'CI MOTORHOME'
+                , 'CITROEN'
+                , 'CKR'
+                , 'CLAAS'
+                , 'CLARK'
+                , 'CLASSIC CUSTOM'
+                , 'CLASSIC REPLICAS'
+                , 'CLAYTON'
+                , 'COLEMAN MILNE'
+                , 'COLT'
+                , 'COMMER'
+                , 'CORVETTE'
+                , 'COSSACK'
+                , 'COUNTY COMM CARS'
+                , 'COVENTRY CLIMAX'
+                , 'CPI'
+                , 'CROMPTON (LEYLAND)'
+                , 'CSR'
+                , 'CTM'
+                , 'CZ'
+                , 'DACIA'
+                , 'DAELIM'
+                , 'DAEWOO'
+                , 'DAF'
+                , 'DAF TRUCKS'
+                , 'DAIFO'
+                , 'DAIHATSU'
+                , 'DAIMLER'
+                , 'DAJIANG'
+                , 'DAKAR'
+                , 'DATSUN'
+                , 'DAVID BROWN'
+                , 'DAYANG'
+                , 'DAYUN'
+                , 'DE TOMASO'
+                , 'DEMM'
+                , 'DENNIS'
+                , 'DENNIS FIRE'
+                , 'DERBI'
+                , 'DETHLEFFS'
+                , 'DEUTZ FAHR'
+                , 'DFSK'
+                , 'DI BLASI'
+                , 'DIECI'
+                , 'DINLI'
+                , 'DIRT PRO'
+                , 'DODGE'
+                , 'DODGE (USA)'
+                , 'DOUGLAS'
+                , 'DUCATI'
+                , 'DUPLE'
+                , 'EAGLE'
+                , 'EASY RIDER'
+                , 'EBRO'
+                , 'ECO'
+                , 'EGO'
+                , 'ELECTRICARS'
+                , 'ENTERPRISE BUS'
+                , 'EOS'
+                , 'EPC'
+                , 'ERF'
+                , 'ERIDER'
+                , 'ERIK BUELL RACING'
+                , 'ETON'
+                , 'EUCLID'
+                , 'EUROLINER'
+                , 'EUROTRAC'
+                , 'EVT'
+                , 'EXPLORER'
+                , 'FACTORY'
+                , 'FANTIC MOTOR'
+                , 'FARBOUD'
+                , 'FEIYING'
+                , 'FENDT'
+                , 'FERRARI'
+                , 'FIAT'
+                , 'FMC'
+                , 'FODEN'
+                , 'FORD'
+                , 'FORD NEW HOLLAND'
+                , 'FORDSON'
+                , 'FOREST RIVER'
+                , 'FOSTI'
+                , 'FREIGHT ROVER'
+                , 'FSO CARS'
+                , 'FUTONG'
+                , 'FYM'
+                , 'GAMAX'
+                , 'GARELLI'
+                , 'GAS GAS'
+                , 'GEELY'
+                , 'GEM'
+                , 'GENERIC'
+                , 'GIANTCO'
+                , 'GILERA'
+                , 'GINETTA'
+                , 'GOKA'
+                , 'GO-KART'
+                , 'GOUPIL'
+                , 'GOVECS'
+                , 'GREAT WALL'
+                , 'GREEVES'
+                , 'GRINNALL'
+                , 'GROVE'
+                , 'GSMOON'
+                , 'GUY'
+                , 'HAMMERHEAD'
+                , 'HANWAY'
+                , 'HAOTIAN'
+                , 'HARBILT ELECTRIC'
+                , 'HARLEY-DAVIDSON'
+                , 'HARTFORD'
+                , 'HER CHE'
+                , 'HERALD MOTOR COMPANY'
+                , 'HERO PUCH'
+                , 'HERTFORD'
+                , 'HILLMAN'
+                , 'HIMO'
+                , 'HINO'
+                , 'HOLDEN'
+                , 'HOLMER EXXACT'
+                , 'HONCHING'
+                , 'HONDA'
+                , 'HONGDOU'
+                , 'HONGYANG'
+                , 'HONGYI'
+                , 'HONLEY'
+                , 'HUASHA'
+                , 'HUATIAN'
+                , 'HUMBER'
+                , 'HUMMER'
+                , 'HUONIAO'
+                , 'HURLIMANN'
+                , 'HUSABERG'
+                , 'HUSQVARNA'
+                , 'HY-MAC LTD'
+                , 'HYMER'
+                , 'HYOSUNG'
+                , 'HYSTER'
+                , 'HYUNDAI'
+                , 'INDIAN'
+                , 'INFINITI'
+                , 'INT. HARVESTER'
+                , 'INVACAR'
+                , 'IRIS.BUS'
+                , 'IRIZAR'
+                , 'ISEKI'
+                , 'ISUZU'
+                , 'ISUZU TRUCKS'
+                , 'ITALJET'
+                , 'IVECO'
+                , 'IVECO FORD'
+                , 'IVECO-FORD'
+                , 'JACOBSEN'
+                , 'JAGUAR'
+                , 'JAMES'
+                , 'JAWA'
+                , 'JAXIN'
+                , 'JCB'
+                , 'JCM'
+                , 'JEEP'
+                , 'JENSEN'
+                , 'JIALING'
+                , 'JIANSHE'
+                , 'JINCHENG'
+                , 'JINLUN'
+                , 'JM STAR'
+                , 'JOHN ALLEN'
+                , 'JOHN DEERE'
+                , 'JOHNSTON SWEEPERS'
+                , 'JONWAY'
+                , 'JORDAN'
+                , 'JUNGHEINRICH'
+                , 'KAISAR'
+                , 'KANGDA'
+                , 'KANUNI'
+                , 'KARRIER'
+                , 'KASEA'
+                , 'KASSBOHRER'
+                , 'KATO'
+                , 'KAWASAKI'
+                , 'KAWATA'
+                , 'KAZUMA'
+                , 'KEEN'
+                , 'KEEWAY'
+                , 'KIA'
+                , 'KINETIC'
+                , 'KING LONG'
+                , 'KINGTON'
+                , 'KINLON'
+                , 'KINROAD'
+                , 'KIOTI'
+                , 'KNAUS'
+                , 'KOMATSU'
+                , 'KSR MOTO'
+                , 'KTM'
+                , 'KUBOTA'
+                , 'KYMCO'
+                , 'LADA'
+                , 'LAMBORGHINI'
+                , 'LAMBRETTA'
+                , 'LANCIA'
+                , 'LAND ROVER'
+                , 'LANDINI'
+                , 'LANSING LINDE'
+                , 'LAVERDA'
+                , 'LDV'
+                , 'LEIKE'
+                , 'LEXMOTO'
+                , 'LEXUS'
+                , 'LEYLAND'
+                , 'LEYLAND AEC'
+                , 'LEYLAND AM'
+                , 'LEYLAND CARS'
+                , 'LEYLAND DAF'
+                , 'LEYLAND NATIONAL'
+                , 'LEYLAND REDLINE'
+                , 'LEYLAND SCOTSTOUN'
+                , 'LIEBHERR'
+                , 'LIFAN'
+                , 'LIGIER'
+                , 'LINCOLN'
+                , 'LINER'
+                , 'LINHAI'
+                , 'LINMAX'
+                , 'LML'
+                , 'LONCIN'
+                , 'LONDON TAXIS INT'
+                , 'LONGJIA'
+                , 'LONSDALE'
+                , 'LOTUS'
+                , 'LUCKY'
+                , 'MAGIRUS DEUTZ'
+                , 'MAGNI'
+                , 'MAHINDRA'
+                , 'MALAGUTI'
+                , 'MAN'
+                , 'MAN/VW'
+                , 'MANET'
+                , 'MANITOU'
+                , 'MARCOS'
+                , 'MARSHALL'
+                , 'MARTIN CONQUEST'
+                , 'MASERATI'
+                , 'MASH'
+                , 'MASSEY FERGUSON'
+                , 'MATBRO'
+                , 'MATCHLESS'
+                , 'MATHIEU'
+                , 'MAXUS'
+                , 'MAYBACH'
+                , 'MAZDA'
+                , 'MBK'
+                , 'MCC'
+                , 'MCCORMICK'
+                , 'MCW'
+                , 'MEGELLI'
+                , 'MERCEDES'
+                , 'MERCEDES-BENZ'
+                , 'MERCURY'
+                , 'MERLO'
+                , 'METROCAB'
+                , 'MG'
+                , 'MGXPOWER'
+                , 'MIA'
+                , 'MICROCAR'
+                , 'MIG'
+                , 'MINI'
+                , 'MITSUBISHI'
+                , 'MITSUBISHI FUSO'
+                , 'MOBYLETTE'
+                , 'MODEC'
+                , 'MODENAS'
+                , 'MOKE AUTOMIBILI'
+                , 'MONIKA'
+                , 'MONTESA'
+                , 'MORGAN'
+                , 'MORINI'
+                , 'MORRIS'
+                , 'MOSKVICH'
+                , 'MOTO AUPA'
+                , 'MOTO GUZZI'
+                , 'MOTO MORINI'
+                , 'MOTO ROMA'
+                , 'MOTO ZETA'
+                , 'MOTOBECANE'
+                , 'MOTOBI'
+                , 'MOTOMEL'
+                , 'MOTOR HISPANIA'
+                , 'MOTOR JIKOV'
+                , 'MOTRON'
+                , 'MOXY'
+                , 'MUIR-HILL'
+                , 'MULTIDRIVE'
+                , 'MV AGUSTA'
+                , 'MZ'
+                , 'NECHT'
+                , 'NECO'
+                , 'NEOPLAN'
+                , 'NEVAL'
+                , 'NEW HOLLAND'
+                , 'NFM'
+                , 'NIESMANN + BISCHOFF'
+                , 'NIPPI'
+                , 'NIPPONIA'
+                , 'NISSAN'
+                , 'NOBLE'
+                , 'NORTON'
+                , 'NORTON VILL. TRIUMPH'
+                , 'NORTON VILLIERS'
+                , 'NSU'
+                , 'NUFFIELD'
+                , 'OLDSMOBILE'
+                , 'OPEL'
+                , 'OPTARE'
+                , 'ORION'
+                , 'OSSA'
+                , 'OXYGEN'
+                , 'PANTHER'
+                , 'PEGASO'
+                , 'PENTA'
+                , 'PERODUA'
+                , 'PEUGEOT'
+                , 'PGO'
+                , 'PHOENIX'
+                , 'PIAGGIO'
+                , 'PINZGAUER'
+                , 'PIONEER'
+                , 'PLYMOUTH'
+                , 'POCLAIN'
+                , 'POLARIS'
+                , 'POLSKI-FIAT'
+                , 'PONTIAC'
+                , 'POR'
+                , 'PORSCHE'
+                , 'PORTARO'
+                , 'PRAGA'
+                , 'PROTON'
+                , 'PS MOTOR MANET'
+                , 'PUCH'
+                , 'PULSE'
+                , 'QINGQI'
+                , 'QUADZILLA'
+                , 'RAIDER'
+                , 'RALEIGH'
+                , 'RANSOME'
+                , 'REDROCK'
+                , 'REGENT'
+                , 'RELIANT'
+                , 'RENAULT'
+                , 'RENAULT TRUCKS'
+                , 'RENEGADE'
+                , 'REVA'
+                , 'REWACO'
+                , 'RHON'
+                , 'RIEJU'
+                , 'RILEY'
+                , 'ROADLESS'
+                , 'ROLLS ROYCE'
+                , 'ROVER'
+                , 'ROVIGO'
+                , 'ROYAL ENFIELD'
+                , 'R-VISION'
+                , 'SAAB'
+                , 'SACHS'
+                , 'SAITING'
+                , 'SAME'
+                , 'SAN'
+                , 'SANBEN'
+                , 'SANILI'
+                , 'SANLI'
+                , 'SANTANA'
+                , 'SANYA'
+                , 'SANYANG'
+                , 'SAO'
+                , 'SAVIEM'
+                , 'SAXON'
+                , 'SCAMMELL'
+                , 'SCANIA'
+                , 'SCARAB'
+                , 'SCHMIDT'
+                , 'SCORPA'
+                , 'SD'
+                , 'SEAT'
+                , 'SECMA'
+                , 'SEDDON/ATKINSON'
+                , 'SETRA'
+                , 'SFM'
+                , 'SFMM'
+                , 'SHE LUNG'
+                , 'SHENKE'
+                , 'SHERCO'
+                , 'SHIBAURA'
+                , 'SHINERAY'
+                , 'SHIRE'
+                , 'SIAMOTO'
+                , 'SIMCA'
+                , 'SIMSON'
+                , 'SINGER'
+                , 'SINNIS'
+                , 'SINSKI'
+                , 'SIROMER'
+                , 'SITCAR'
+                , 'SKODA'
+                , 'SKYGO'
+                , 'SKYJET'
+                , 'SKYTEAM'
+                , 'SKYWING'
+                , 'SMART'
+                , 'SMC'
+                , 'SMITHS'
+                , 'SONIK'
+                , 'SP MOTO'
+                , 'SSANGYONG'
+                , 'STARWAY'
+                , 'STEYR'
+                , 'STOTHERT AND PITT'
+                , 'STRATHCARRON'
+                , 'STUART TAYLOR'
+                , 'SUBARU'
+                , 'SUKIDA'
+                , 'SUMOTO'
+                , 'SUNBEAM'
+                , 'SUNDIRO'
+                , 'SUPERBYKE'
+                , 'SUPERMOTO'
+                , 'SUZUKI'
+                , 'SUZUKO'
+                , 'SWAP'
+                , 'SYM'
+                , 'TAFE'
+                , 'TAISHAN'
+                , 'TAIWAN GOLDEN BEE'
+                , 'TALBOT'
+                , 'TAM'
+                , 'TAMORETTI'
+                , 'TATA'
+                , 'TAYAKO'
+                , 'TEC'
+                , 'TEMSA'
+                , 'TESLA'
+                , 'THINK'
+                , 'THUMPSTAR'
+                , 'THWAITES'
+                , 'TIANJIN'
+                , 'TIPPEN DELTA'
+                , 'TM'
+                , 'TOMOS'
+                , 'TONG YANG'
+                , 'TOYOTA'
+                , 'TRANSBUS INT'
+                , 'TRIGANO'
+                , 'TRIUMPH'
+                , 'TVR'
+                , 'TYM'
+                , 'UMM'
+                , 'UNIMOG'
+                , 'UNIVERSAL'
+                , 'URAL'
+                , 'URBAN'
+                , 'URSUS'
+                , 'UVM'
+                , 'VALMET'
+                , 'VALPADANA'
+                , 'VALTRA'
+                , 'VAN HOOL'
+                , 'VANDEN PLAS'
+                , 'VAUXHALL'
+                , 'VDL'
+                , 'VDL BOVA'
+                , 'VECTRIX'
+                , 'VELOCETTE'
+                , 'VELOSOLEX'
+                , 'VENTURI'
+                , 'VERTEMATI'
+                , 'VESPA (DOUGLAS)'
+                , 'VICTORY'
+                , 'VOLGA'
+                , 'VOLKSWAGEN'
+                , 'VOLVO'
+                , 'VONROAD'
+                , 'VOR'
+                , 'VOXAN'
+                , 'VULCAN'
+                , 'W+E'
+                , 'WANGYE'
+                , 'WARRIOR'
+                , 'WARTBURG'
+                , 'WESTFIELD'
+                , 'WHITE KNUCKLE'
+                , 'WHITLOCK BROS'
+                , 'WINGATE + ROGERS'
+                , 'WINGET'
+                , 'WK BIKES'
+                , 'WOLSELEY'
+                , 'WRIGHTBUS'
+                , 'WUYANG'
+                , 'XGJAO'
+                , 'XINGYUE'
+                , 'XINLING'
+                , 'XINTIAN'
+                , 'X-SPORT'
+                , 'YALE'
+                , 'YAMAHA'
+                , 'YAMATI'
+                , 'YAMOTO'
+                , 'YANMAR'
+                , 'YIBEN MEIDUC'
+                , 'YIYING'
+                , 'YUAN'
+                , 'YUTONG'
+                , 'Z Y MOTOR'
+                , 'ZASTAVA'
+                , 'ZENNCO'
+                , 'ZENOS'
+                , 'ZETOR'
+                , 'ZHENHUA'
+                , 'ZHONGNENG'
+                , 'ZNEN'
+                , 'ZONGSHEN'
+                , 'ZONTES']
+        });
+
+
+        //RequiredField override
+        function RequiredFieldValidatorEvaluateIsValid(val) {
+            if ((ValidatorTrim(ValidatorGetValue(val.controltovalidate)) != ValidatorTrim(val.initialvalue)) == false) {
+                $(val).closest("div").addClass("validationReq");
+            } else {
+                $(val).closest("div").removeClass("validationReq");
+            }
+            return (ValidatorTrim(ValidatorGetValue(val.controltovalidate)) != ValidatorTrim(val.initialvalue))
+        }
+    </script>
+
+                </div>
+            </div>
+
+            <footer class="group js-footer" id="footer" role="contentinfo">
+                <div class="footer-wrapper">
+                    <div class="footer-meta">
+                        <div class="footer-meta-inner">
+                            <ul>
+                                <li>
+                                    <a href="cookies.aspx" target="_blank">Cookies</a>
+                                </li>
+                                <li>
+                                    <a href="terms.aspx" target="_blank">Terms and Conditions</a>
+                                </li>
+                                <li>
+                                    <a id="butEnglish" title="Click to view this site in English" href="javascript:__doPostBack(&#39;ctl00$butEnglish&#39;,&#39;&#39;)">English</a>
+                                </li>
+                                <li>
+                                    <a id="butWelsh" title="Cliciwch i weld y safle hwn yn y Gymraeg" href="javascript:__doPostBack(&#39;ctl00$butWelsh&#39;,&#39;&#39;)">Welsh</a>
+                                </li>
+                                <li>
+                                    Built by the <a href="https://dvladigital.blog.gov.uk/">Driver & Vehicle Licensing Agency</a>
+                                </li>
+                            </ul>
+                            <div class="open-government-licence">
+                                <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/">Open Government Licence</a></p>
+                                <p>
+                                    All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2">
+                                        Open Government Licence v2.0</a>, except where otherwise stated</p>
+                            </div>
+                        </div>
+                        <div class="copyright">
+                            <a href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm">
+                                    &copy; Crown copyright</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+                <!--end footer-->
+
+            <script type="text/javascript">
+                //used to reset the form before the form is unloaded
+                $(window).bind("beforeunload", function () {
+                    if (typeof document.forms[0] !== 'undefined') {
+                        document.forms[0].reset();
+                    }
+                });
+            </script>
+
+
+        <div id="global-app-error" class="app-error hidden"></div>
+
+        <script src="https://assets.digital.cabinet-office.gov.uk/static/govuk-template-c4f303154d2a238bdda4d5cf1ebd8d4487822e4cbc3e4c83e743da869443ce72.js" type="text/javascript"></script>
+
+        <script src="https://assets.digital.cabinet-office.gov.uk/static/libs/jquery/jquery-1.11.3-92dc85369a3bf658db02f5a3f52231ccf961a37627ae12486f4ce34eba12a3dd.js"></script>
+        <script src="https://assets.digital.cabinet-office.gov.uk/static/application-234156e0a50d96429d3fe9ab2d8b5280478b9cde609a8e180adbd124382db179.js"></script>
+
+
+        <script src="https://assets.digital.cabinet-office.gov.uk/frontend/frontend-10f4f61a27c820ff4b83b9a886caa1ee9ba490f267c271c8cfc6ddab7bcdbb15.js"></script>
+
+        @*
+            <script type="text/javascript">
+//<![CDATA[
+var MainContent_rfvTxtSearchVRM = document.all ? document.all["MainContent_rfvTxtSearchVRM"] : document.getElementById("MainContent_rfvTxtSearchVRM");
+MainContent_rfvTxtSearchVRM.controltovalidate = "MainContent_txtSearchVrm";
+MainContent_rfvTxtSearchVRM.errormessage = "You must enter your registration number in order to view your vehicle record";
+MainContent_rfvTxtSearchVRM.display = "Dynamic";
+MainContent_rfvTxtSearchVRM.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+MainContent_rfvTxtSearchVRM.initialvalue = "";
+var MainContent_revtxtSearchVrm1 = document.all ? document.all["MainContent_revtxtSearchVrm1"] : document.getElementById("MainContent_revtxtSearchVrm1");
+MainContent_revtxtSearchVrm1.controltovalidate = "MainContent_txtSearchVrm";
+MainContent_revtxtSearchVrm1.errormessage = "You must enter your registration number in a valid format";
+MainContent_revtxtSearchVrm1.display = "Dynamic";
+MainContent_revtxtSearchVrm1.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+MainContent_revtxtSearchVrm1.validationexpression = "^(([A-Za-z]{1,2}[ ]?[0-9]{1,4})|([A-Za-z]{3}[ ]?[0-9]{1,3})|([0-9]{1,3}[ ]?[A-Za-z]{3})|([0-9]{1,4}[ ]?[A-Za-z]{1,2})|([A-Za-z]{3}[ ]?[0-9]{1,3}[ ]?[A-Za-z])|([A-Za-z][ ]?[0-9]{1,3}[ ]?[A-Za-z]{3})|([A-Za-z]{2}[ ]?[0-9]{2}[ ]?[A-Za-z]{3})|([A-Za-z]{3}[ ]?[0-9]{4}))$";
+var MainContent_reqMakeTextBox = document.all ? document.all["MainContent_reqMakeTextBox"] : document.getElementById("MainContent_reqMakeTextBox");
+MainContent_reqMakeTextBox.controltovalidate = "MainContent_MakeTextBox";
+MainContent_reqMakeTextBox.errormessage = "You must select your vehicle make from the list";
+MainContent_reqMakeTextBox.display = "Dynamic";
+MainContent_reqMakeTextBox.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+MainContent_reqMakeTextBox.initialvalue = "";
+var MainContent_RegularExpressionValidator1 = document.all ? document.all["MainContent_RegularExpressionValidator1"] : document.getElementById("MainContent_RegularExpressionValidator1");
+MainContent_RegularExpressionValidator1.controltovalidate = "MainContent_txtV5CDocumentReferenceNumber";
+MainContent_RegularExpressionValidator1.errormessage = "The V5C reference number you have provided should be 11 digits";
+MainContent_RegularExpressionValidator1.display = "Dynamic";
+MainContent_RegularExpressionValidator1.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+MainContent_RegularExpressionValidator1.validationexpression = "^([0-9]{11})$";
+//]]>
+</script>
+*@
+
+
+        @*</form>*@
+
+
+    </body>
+</html>
+
